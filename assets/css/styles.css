@@ -1,0 +1,250 @@
+/* Global styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fill-stone: #808000;
+    --fill-base-white: #fff;
+    --fill-primary-white: #fefefe;
+    --fill-primary-black: #00000080;
+    --fill-base-black: #000;
+    --fill-primary-blue: #185A7D;
+    --fill-secondary-black: #E2DCDC;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fill-base-white);
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.default-btn {
+    background-color: var(--fill-stone);
+    color: var(--fill-base-white);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Modal Background */
+.logo {
+    max-width: 250px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--fill-primary-black);
+    opacity: 0;
+    transition: 0.2s all ease;
+    padding: 20px;
+}
+
+.modal.show {
+    /* display: block; */
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.modal-content {
+    background-color: var(--fill-primary-white);
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border: .5px solid var(--fill-secondary-black);
+    transition: 0.2s all ease;
+    transform: translateY(10%);
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    transition: 0.5s all ease;
+}
+
+.description,
+.tagline {
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 1.3;
+    color: var(--fill-base-black);
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: var(--fill-primary-blue);
+    padding: 10px 20px;
+    color: var(--fill-base-white);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-body {
+    padding: 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field input {
+    border: 2px solid var(--fill-secondary-black);
+    padding: 10px 20px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+input[type="checkbox"] {
+    border: 2px solid var(--fill-secondary-black);
+    max-width: 18px;
+    width: 100%;
+    height: 18px;
+}
+
+.checkbox-label {
+    color: var(--fill-base-black);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.checkbox-field {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.form-field .label {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: var(--fill-base-black);
+    line-height: 1;
+    font-weight: 500;
+}
+
+/* Close Button */
+.close {
+    color: var(--fill-base-white);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--fill-primary-black);
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--fill-secondary-black);
+}
+
+.consent-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fill-base-black);
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 425px) {
+    .modal-body {
+        padding: 20px 20px;
+    }
+
+    .description,
+    .tagline {
+        font-size: 16px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .checkbox-label {
+        font-size: 14px;
+    }
+
+    .form-field input {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .description {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .checkbox-label {
+        font-size: 14px;
+    }
+
+    .modal-body {
+        padding: 20px 35px;
+    }
+
+    .form-field input {
+        max-width: 70%;
+        margin-bottom: 25px;
+    }
+
+    .checkbox-field {
+        padding-bottom: 20px;
+    }
+    .form-field .label {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .description,
+    .tagline {
+        font-size: 22px;
+    }
+
+    .checkbox-label {
+        font-size: 16px;
+    }
+
+    .modal-body {
+        padding: 20px 50px;
+    }
+}

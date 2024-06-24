@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Modal</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Trigger button -->
+    <button data-modal-target="#myModal" class="default-btn">Open Modal</button>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal" data-modal>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" data-close>&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="logo">
+                    <img src="./assets/images/image001.png" alt="modallogo">
+                </div>
+                <p class="description">Our program has reached its capacity at this time. Please leave your name
+                    and email, and we will reach out to you when we've reopened it.</p>
+                <span class="tagline">Thank you for your interest!</span>
+                <form>
+                    <div class="form-field">
+                        <label class="label">Name*</label>
+                        <input type="text" />
+                    </div>
+                    <div class="form-field">
+                        <label class="label">Email Address*</label>
+                        <input type="email" />
+                    </div>
+                    <h6 class="consent-title">Consent*</h6>
+                    <div class="checkbox-field">
+                        <input type="checkbox" />
+                        <label class="checkbox-label">
+                            Yes, I would like to receive communications from Resource Innovations regarding the PG&E
+                            Simplified Savings Program, services, products, and events
+                        </label>
+                    </div>
+                    <button type="submit" class="default-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>
